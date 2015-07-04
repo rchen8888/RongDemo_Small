@@ -1,6 +1,6 @@
 This is rongcloud samll demo , Welcome everyone to download
 
-The environment is eclipse
+The environment is eclipse , Have Chinese annotation in the project  
 
 1 : Examples of the use of Fragment
 2 : The head of sample the rongcloud  nickname loading
@@ -11,5 +11,5 @@ The environment is eclipse
 
 Subsequent and more updates 
 Please continue to focus on
-					thanks
-					Aming
+					         thanks
+					          Aming
