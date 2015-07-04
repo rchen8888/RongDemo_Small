@@ -8,6 +8,10 @@ The environment is eclipse , Have Chinese annotation in the project
 4 : The chat between two users
 5 : Sample the nickname the display of the title bar
 6 : Sample the way Frament and ViewPager
+7 : Head shape changes
+
+
+
 
 Subsequent and more updates 
 Please continue to focus on
