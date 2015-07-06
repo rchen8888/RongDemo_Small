@@ -9,7 +9,7 @@ The environment is eclipse , Have Chinese annotation in the project
 5 : Sample the nickname the display of the title bar
 6 : Sample the way Frament and ViewPager
 7 : Head shape changes
-
+8 : add customer service
 
 
 

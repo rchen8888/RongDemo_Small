@@ -330,6 +330,7 @@ int id connect_10010 0x7f08003d
 int id connect_10086 0x7f08003e
 int id container 0x7f08004c
 int id conversation 0x7f080044
+int id customerservice 0x7f080042
 int id description 0x7f080061
 int id enter 0x7f080062
 int id fill 0x7f08003b
@@ -415,7 +416,6 @@ int id rc_warning 0x7f080008
 int id rc_webview 0x7f08004b
 int id refuse_id 0x7f08004e
 int id rel_group_intro 0x7f08005f
-int id sendmessage 0x7f080042
 int id show_pictrue 0x7f080047
 int id shownumber 0x7f080049
 int id sound_off_container_id 0x7f08005a
