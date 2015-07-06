@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rongfragmentdemo.MainActivity" >
+
+    <Button
+        android:id="@+id/connect_10010"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击连接融云server(用户1)" />
+
+    <Button
+        android:id="@+id/connect_10086"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击连接融云server(用户2)" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="做融云操作前请先连接融云server"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/load1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="静态加载融云会话列表" />
+
+    <Button
+        android:id="@+id/load2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="动态加载融云会话列表" />
+
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启会话界面" />
+
+    <Button
+        android:id="@+id/sendmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test的预留" />
+
+</LinearLayout>

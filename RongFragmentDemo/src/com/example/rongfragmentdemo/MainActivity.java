@@ -40,7 +40,7 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 	// username = 移动 userid = 10086 头像 =
 	// http://img02.tooopen.com/Download/2010/5/22/20100522103223994012.jpg
 
-	private Button mUser1, mUser2, mLoadFragment1, mLoadFragment2,mChat,mSendMessage;
+	private Button mUser1, mUser2, mLoadFragment1, mLoadFragment2,mChat,mCustomerService;
 	
 	private String mUserId;
 	
@@ -55,6 +55,9 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 		userIdList = new ArrayList<Friend>();
 		userIdList.add(new Friend("10010","联通","http://img4.imgtn.bdimg.com/it/u=2047908622,1571760504&fm=21&gp=0.jpg"));
 		userIdList.add(new Friend("10086","移动","http://img02.tooopen.com/Download/2010/5/22/20100522103223994012.jpg"));
+		
+		//此处把客服头像 和 昵称 设置了 
+		userIdList.add(new Friend("KEFU1426079728044", "客服服务", "http://www.jf258.com/uploads/2013-07-11/135409968.jpg"));
 		RongIM.setUserInfoProvider(this, false);
 	}
 
@@ -64,13 +67,13 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 		mLoadFragment1 = (Button) findViewById(R.id.load1);
 		mLoadFragment2 = (Button) findViewById(R.id.load2);
 		mChat = (Button) findViewById(R.id.chat);
-		mSendMessage = (Button) findViewById(R.id.sendmessage);
+		mCustomerService = (Button) findViewById(R.id.customerservice);
 		mUser1.setOnClickListener(this);
 		mUser2.setOnClickListener(this);
 		mLoadFragment1.setOnClickListener(this);
 		mLoadFragment2.setOnClickListener(this);
 		mChat.setOnClickListener(this);
-		mSendMessage.setOnClickListener(this);
+		mCustomerService.setOnClickListener(this);
 	}
 
 	@Override
@@ -90,8 +93,10 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 			if(mUserId!=null&&RongIM.getInstance()!=null)
 				//此处聊天是写死的 实际开发中 大家应该写成动态的 
 			RongIM.getInstance().startPrivateChat(MainActivity.this,mUserId.equals("10010") ? "10086" : "10010" , mUserId.equals("10010") ? "联通" : "移动");
-		}else if(v.getId() == R.id.sendmessage){
-//			RongIM.getInstance().getRongIMClient().send
+		}else if(v.getId() == R.id.customerservice){
+			//客服 id 是您在融云开发者平台 客服 功能模块的获取
+			if(RongIM.getInstance() != null)
+			RongIM.getInstance().startCustomerServiceChat(MainActivity.this, "KEFU1426079728044", "客服服务");
 		}
 	}
 

@@ -477,6 +477,7 @@ containing a value of this type.
         public static final int connect_10086=0x7f08003e;
         public static final int container=0x7f08004c;
         public static final int conversation=0x7f080044;
+        public static final int customerservice=0x7f080042;
         public static final int description=0x7f080061;
         public static final int enter=0x7f080062;
         public static final int fill=0x7f08003b;
@@ -562,7 +563,6 @@ containing a value of this type.
         public static final int rc_webview=0x7f08004b;
         public static final int refuse_id=0x7f08004e;
         public static final int rel_group_intro=0x7f08005f;
-        public static final int sendmessage=0x7f080042;
         public static final int show_pictrue=0x7f080047;
         public static final int shownumber=0x7f080049;
         public static final int sound_off_container_id=0x7f08005a;
