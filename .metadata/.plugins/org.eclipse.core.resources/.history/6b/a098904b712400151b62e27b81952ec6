@@ -103,7 +103,6 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 			RongIM.getInstance().startCustomerServiceChat(MainActivity.this, "KEFU1426079728044", "客服服务");
 		}else if(v.getId() == R.id.listener){
 			if (temp) {
-				Log.e(TAG, "回调已走");
 				RongIM.getInstance().getRongIMClient().setConnectionStatusListener(new ConnectionStatusListener() {
 					
 					@Override

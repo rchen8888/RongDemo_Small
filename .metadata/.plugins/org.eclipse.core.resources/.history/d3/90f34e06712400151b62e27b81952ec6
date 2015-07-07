@@ -47,11 +47,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="开启客服聊天" />
-    
-        <Button
-        android:id="@+id/listener"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="设置监听" />
 
 </LinearLayout>

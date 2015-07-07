@@ -40,7 +40,7 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 	// username = 移动 userid = 10086 头像 =
 	// http://img02.tooopen.com/Download/2010/5/22/20100522103223994012.jpg
 
-	private Button mUser1, mUser2, mLoadFragment1, mLoadFragment2,mChat,mCustomerService,mListener;
+	private Button mUser1, mUser2, mLoadFragment1, mLoadFragment2,mChat,mCustomerService;
 	
 	private String mUserId;
 	
@@ -70,14 +70,12 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 		mLoadFragment2 = (Button) findViewById(R.id.load2);
 		mChat = (Button) findViewById(R.id.chat);
 		mCustomerService = (Button) findViewById(R.id.customerservice);
-		mListener = (Button) findViewById(R.id.listener);
 		mUser1.setOnClickListener(this);
 		mUser2.setOnClickListener(this);
 		mLoadFragment1.setOnClickListener(this);
 		mLoadFragment2.setOnClickListener(this);
 		mChat.setOnClickListener(this);
 		mCustomerService.setOnClickListener(this);
-		mListener.setOnClickListener(this);
 	}
 
 	@Override
@@ -101,9 +99,8 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 			//客服 id 是您在融云开发者平台 客服 功能模块的获取
 			if(RongIM.getInstance() != null)
 			RongIM.getInstance().startCustomerServiceChat(MainActivity.this, "KEFU1426079728044", "客服服务");
-		}else if(v.getId() == R.id.listener){
+		}else{
 			if (temp) {
-				Log.e(TAG, "回调已走");
 				RongIM.getInstance().getRongIMClient().setConnectionStatusListener(new ConnectionStatusListener() {
 					
 					@Override

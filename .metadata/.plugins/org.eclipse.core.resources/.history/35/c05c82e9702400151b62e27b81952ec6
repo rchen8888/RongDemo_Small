@@ -1,15 +1,13 @@
 package com.example.rongfragmentdemo;
 
-import io.rong.imkit.RongIM;
-import io.rong.imkit.RongIM.UserInfoProvider;
-import io.rong.imlib.RongIMClient.ConnectCallback;
-import io.rong.imlib.RongIMClient.ConnectionStatusListener;
-import io.rong.imlib.RongIMClient.ErrorCode;
-import io.rong.imlib.model.UserInfo;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import io.rong.imkit.RongIM;
+import io.rong.imkit.RongIM.UserInfoProvider;
+import io.rong.imlib.RongIMClient.ConnectCallback;
+import io.rong.imlib.RongIMClient.ErrorCode;
+import io.rong.imlib.model.UserInfo;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -21,6 +19,8 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.rongfragmentdemo.R;
 
 /**
  * 
@@ -40,13 +40,11 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 	// username = 移动 userid = 10086 头像 =
 	// http://img02.tooopen.com/Download/2010/5/22/20100522103223994012.jpg
 
-	private Button mUser1, mUser2, mLoadFragment1, mLoadFragment2,mChat,mCustomerService,mListener;
+	private Button mUser1, mUser2, mLoadFragment1, mLoadFragment2,mChat,mCustomerService;
 	
 	private String mUserId;
 	
 	private List<Friend> userIdList;
-
-	protected boolean temp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +68,12 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 		mLoadFragment2 = (Button) findViewById(R.id.load2);
 		mChat = (Button) findViewById(R.id.chat);
 		mCustomerService = (Button) findViewById(R.id.customerservice);
-		mListener = (Button) findViewById(R.id.listener);
 		mUser1.setOnClickListener(this);
 		mUser2.setOnClickListener(this);
 		mLoadFragment1.setOnClickListener(this);
 		mLoadFragment2.setOnClickListener(this);
 		mChat.setOnClickListener(this);
 		mCustomerService.setOnClickListener(this);
-		mListener.setOnClickListener(this);
 	}
 
 	@Override
@@ -101,17 +97,6 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 			//客服 id 是您在融云开发者平台 客服 功能模块的获取
 			if(RongIM.getInstance() != null)
 			RongIM.getInstance().startCustomerServiceChat(MainActivity.this, "KEFU1426079728044", "客服服务");
-		}else if(v.getId() == R.id.listener){
-			if (temp) {
-				Log.e(TAG, "回调已走");
-				RongIM.getInstance().getRongIMClient().setConnectionStatusListener(new ConnectionStatusListener() {
-					
-					@Override
-					public void onChanged(ConnectionStatus arg0) {
-						Log.e(TAG, "网络状态已经变化");
-					}
-				});
-			}
 		}
 	}
 
@@ -142,7 +127,6 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 					;
 				}
 				Log.e(TAG, "connect success userid is :" + userId);
-				temp = true;
 			}
 
 			@Override
