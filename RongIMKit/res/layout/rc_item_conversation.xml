@@ -21,7 +21,7 @@
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             app:defDrawable="@drawable/rc_default_portrait"
-            app:shape="circle"/>
+            app:shape="square"/>
 
         <TextView
             android:id="@+id/rc_unread_message"
@@ -57,7 +57,6 @@
             android:layout_height="48dp"
             app:defDrawable="@drawable/rc_default_portrait"
             android:layout_gravity="center_vertical"
-            app:shape="circle"
             android:background="@android:color/transparent"/>
 
         <TextView

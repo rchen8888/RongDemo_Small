@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.example.rongfragmentdemo.MainActivity"/>
+<fullyQualifiedTypeName name="com.example.rongfragmentdemo.Friend"/>
+<fullyQualifiedTypeName name="io.rong.imlib.RongIMClient.ConnectionStatusListener"/>
+<fullyQualifiedTypeName name="com.example.rongfragmentdemo.R.id"/>
+</qualifiedTypeNameHistroy>

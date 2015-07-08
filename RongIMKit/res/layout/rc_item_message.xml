@@ -23,7 +23,6 @@
         android:layout_below="@id/rc_time"
         android:layout_alignParentLeft="true"
         android:layout_marginRight="4dp"
-        app:shape="circle"
         android:background="@android:color/transparent"
         app:defDrawable="@drawable/rc_ic_def_msg_portrait"/>
 
@@ -34,7 +33,6 @@
         android:layout_below="@id/rc_time"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="4dp"
-        app:shape="circle"
         android:background="@android:color/transparent"
         app:defDrawable="@drawable/rc_ic_def_msg_portrait"/>
 
