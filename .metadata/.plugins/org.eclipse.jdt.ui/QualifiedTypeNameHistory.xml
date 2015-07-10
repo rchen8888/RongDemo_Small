@@ -4,4 +4,6 @@
 <fullyQualifiedTypeName name="com.example.rongfragmentdemo.Friend"/>
 <fullyQualifiedTypeName name="io.rong.imlib.RongIMClient.ConnectionStatusListener"/>
 <fullyQualifiedTypeName name="com.example.rongfragmentdemo.R.id"/>
+<fullyQualifiedTypeName name="io.rong.imlib.RongIMClient.OnReceiveMessageListener"/>
+<fullyQualifiedTypeName name="io.rong.message.ImageMessage"/>
 </qualifiedTypeNameHistroy>

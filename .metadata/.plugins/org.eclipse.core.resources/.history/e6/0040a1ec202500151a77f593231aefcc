@@ -5,10 +5,7 @@ import io.rong.imkit.RongIM.UserInfoProvider;
 import io.rong.imlib.RongIMClient.ConnectCallback;
 import io.rong.imlib.RongIMClient.ConnectionStatusListener;
 import io.rong.imlib.RongIMClient.ErrorCode;
-import io.rong.imlib.RongIMClient.OnReceiveMessageListener;
-import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
-import io.rong.message.ImageMessage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,18 +112,6 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 					}
 				});
 			}
-				RongIM.getInstance().setOnReceiveMessageListener(new OnReceiveMessageListener() {
-					
-					@Override
-					public boolean onReceived(Message message, int arg1) {
-						Log.e(TAG, "接收消息的监听");
-						if (message.getContent() instanceof ImageMessage) {
-				            ImageMessage imageMessage = (ImageMessage) message.getContent();
-				            Log.e(TAG, "缩略路径为："+imageMessage.getThumUri());
-						}
-						return false;
-					}
-				});
 		}
 	}
 

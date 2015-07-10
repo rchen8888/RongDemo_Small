@@ -122,7 +122,7 @@ public class MainActivity extends Activity implements OnClickListener, UserInfoP
 						Log.e(TAG, "接收消息的监听");
 						if (message.getContent() instanceof ImageMessage) {
 				            ImageMessage imageMessage = (ImageMessage) message.getContent();
-				            Log.e(TAG, "缩略路径为："+imageMessage.getThumUri());
+				            Log.e(TAG, "本地路径为："+imageMessage.getLocalUri());
 						}
 						return false;
 					}
